@@ -20,6 +20,11 @@ spec:
           image: darylnauman/project-two-email-api:%TAG%
           ports:
             - containerPort: 7000
+        - name: prometheus
+            imagePullPolicy: Always
+            image: bitnami/prometheus
+            ports:
+              - containerPort: 9000
 ---
 apiVersion: v1
 kind: Service
