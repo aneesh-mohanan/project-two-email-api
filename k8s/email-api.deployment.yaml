@@ -17,7 +17,7 @@ spec:
       containers:
         - name: email-api-server
           imagePullPolicy: Always
-          image: darylnauman/project-two-email-api:%TAG%
+          image: aneeshcm18/project-two-email-api:%TAG%
           ports:
             - containerPort: 7000
         - name: prometheus

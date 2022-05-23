@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = 'darylnauman/project-two-email-api'
+    registry = 'aneeshcm18/project-two-email-api'
     dockerHubCreds = 'docker_hub'
     dockerImage = ''
   }
@@ -85,11 +85,11 @@ pipeline {
             steps {
             sh 'sed -i "s/%TAG%/$BUILD_NUMBER/g" ./k8s/email-api.deployment.yaml'
             step([$class: 'KubernetesEngineBuilder',
-                projectId: 'project2-350217',
+                projectId: 'project-2-350804',
                 clusterName: 'my-first-cluster-1',
-                zone: 'us-central1-c',
+                zone: 'us-east1-c',
                 manifestPattern: 'k8s/',
-                credentialsId: 'project2',
+                credentialsId: 'project-2',
                 verifyDeployments: true
             ])
 
